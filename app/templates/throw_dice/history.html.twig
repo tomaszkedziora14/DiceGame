@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Historia rzutów</h2>
+            <table>
+                <tr>
+                    <th>Player Result</th>
+                    <th>Computer Result</th>
+                    <th>Winner</th>
+                </tr>
+                {% for result in history %}
+                    <tr>
+                        <td>{{ result.playerResult }}</td>
+                        <td>{{ result.computerResult }}</td>
+                        <td>{{ result.winner }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

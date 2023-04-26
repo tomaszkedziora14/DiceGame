@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ThrowDiceController!{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6">
+            {{ form_start(form) }}
+            {{ form_row(form.dice, { 'attr': {'class': 'form-control'} }) }}
+            {{ form_row(form.submit, { 'attr': {'class': 'btn btn-primary'} }) }}
+            {{ form_end(form) }}
+        </div>
+{#        <div class="col-md-6">#}
+{#            <a href="{{ path('app_history') }}">Show history</a>#}
+{#        </div>#}
+    </div>
+{% endblock %}
