@@ -84,7 +84,7 @@ class ThrowDiceController extends AbstractController
         $history = $throwDiceHistoryRepository->findAll();
         
         if (!$history) {
-            throw new ResourceNotFoundExceptionn('No movies found');
+            throw new ResourceNotFoundExceptionn('No history found');
         }
 
         return $this->render('throw_dice/history.html.twig', [
